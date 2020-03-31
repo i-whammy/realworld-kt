@@ -3,7 +3,9 @@ package com.whammy.article.repository
 import com.whammy.article.domain.*
 import com.whammy.article.exception.ArticleNotFoundException
 import com.whammy.article.usecase.IArticleRepository
+import org.springframework.stereotype.Repository
 
+@Repository
 class ArticleRepository(private val driver: ArticleDriver):
     IArticleRepository {
     override fun getArticles(): Articles {

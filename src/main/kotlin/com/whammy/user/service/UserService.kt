@@ -4,10 +4,12 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import com.whammy.user.domain.User
 import com.whammy.user.exception.AuthorizationFailureException
+import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.util.*
 
+@Service
 class UserService {
     // It might be better to have this secret in some external configuration file...
     private val issuer = "Real World App"
